@@ -1,9 +1,15 @@
+### Comments from the Phonopy-Spectroscopy-SSI fork author
+
+This fork was created to implement features needed for the project 'ADAPTING EXISTING MACHINE LEARNING
+SOLUTIONS FOR INFRARED ANALYSIS OF PRECIPITATE LEFT AFTER PHOSPHORUS ORE PURIFICATION'. Initials SSI in 
+Phonopy-Spectroscopy-SSI stand for Solid-State-Infrared, which is a shorthand name for the project title.
+
 # Phonopy-Spectroscopy
 
 Phonopy-Spectroscopy is a project to add the capability to simulate vibrational spectra to the Phonopy code.[[1](#Ref1)]
 
-The software package consists of a Python module, `spectroscopy`, along with a set of command-line scripts for working with output from Phonopy and VASP.
-
+The software package consists of a Python module, `spectroscopy`, along with a set of command-line scripts for working
+with output from Phonopy and VASP.
 
 ## Features
 
@@ -17,15 +23,16 @@ The software package consists of a Python module, `spectroscopy`, along with a s
 
 * Include first-principles mode linewidths from Phono3py[[2](#Ref2)] calculations (Phonopy interface).
 
-
 ## Installation
 
-The code depends on the `NumPy`[[3](#Ref3)] and `PyYAML`[[4](#Ref4)] packages, and the Phonopy interface additionally requires the `Phonopy` Python library[[1](#Ref1)] and the H5py package.[[5](#Ref5)]
+The code depends on the `NumPy`[[3](#Ref3)] and `PyYAML`[[4](#Ref4)] packages, and the Phonopy interface additionally
+requires the `Phonopy` Python library[[1](#Ref1)] and the H5py package.[[5](#Ref5)]
 All four packages are available from PyPI (via `pip`) and on the Anaconda platform (`conda`).
 Please see the documentation of the codes for instructions on how to install them on your system.
 
 This code does not currently ship with a `setup.py` script.
-After cloning or downloading and unpacking the repository, add it to your `PYTHONPATH` so that the command-line scripts can locate `spectroscopy`, e.g.:
+After cloning or downloading and unpacking the repository, add it to your `PYTHONPATH` so that the command-line scripts
+can locate `spectroscopy`, e.g.:
 
 `export PYTHONPATH=${PYTHONPATH}:/Volumes/Data/Repositories/Phonopy-Spectroscopy/lib`
 
@@ -42,22 +49,26 @@ For a description of the command-line arguments the scripts accept, call them wi
 
 `phonopy-ir -h`
 
-
 ## Examples
 
-1. [Benzene derivatives](./Examples/Benzene-Derivatives): Simulated IR spectra of isolated molecules using the Phonopy interface, compared to reference gas-phase spectra from the NIST database
+1. [Benzene derivatives](./Examples/Benzene-Derivatives): Simulated IR spectra of isolated molecules using the Phonopy
+   interface, compared to reference gas-phase spectra from the NIST database
 
-2. [&alpha;-SiO<sub>2</sub>](./Examples/a-SiO2): Detailed simulation of the IR and Raman spectra of &alpha;-SiO<sub>2</sub> (quartz) using the Phonopy interface, including first-principles linewidths calculated using Phono3py, compared to spectra from the RRUFF database
-
+2. [&alpha;-SiO<sub>2</sub>](./Examples/a-SiO2): Detailed simulation of the IR and Raman spectra of &alpha;-SiO<sub>
+   2</sub> (quartz) using the Phonopy interface, including first-principles linewidths calculated using Phono3py,
+   compared to spectra from the RRUFF database
 
 ## Citation
 
 We haven't written a standalone paper on this code yet, but it is based on the formulae collected in:
 
-J. M. Skelton, L. A. Burton, A. J. Jackson, F. Oba, S. C. Parker and A. Walsh, "Lattice dynamics of the tin sulphides SnS<sub>2</sub>, SnS and Sn<sub>2</sub>S<sub>3</sub>: vibrational spectra and thermal transport", *Physical Chemistry Chemical Physics* **19**, 12452 (**2017**), DOI: [10.1039/C7CP01680H](https://doi.org/10.1039/C7CP01680H) (this paper is open access)
+J. M. Skelton, L. A. Burton, A. J. Jackson, F. Oba, S. C. Parker and A. Walsh, "Lattice dynamics of the tin sulphides
+SnS<sub>2</sub>, SnS and Sn<sub>2</sub>S<sub>3</sub>: vibrational spectra and thermal transport", *Physical Chemistry
+Chemical Physics* **19**, 12452 (**2017**), DOI: [10.1039/C7CP01680H](https://doi.org/10.1039/C7CP01680H) (this paper is
+open access)
 
-If you use Phonopy-Spectroscopy in your work, please consider citing this paper and/or including a link to this GitHub repository when you publish your results.
-
+If you use Phonopy-Spectroscopy in your work, please consider citing this paper and/or including a link to this GitHub
+repository when you publish your results.
 
 ## References
 
