@@ -685,7 +685,15 @@ def _output_scalar_spectrum_or_spectra(
     # have their own error-handling, and we defer to those where
     # possible to reduce "boilerplate" code.
 
-    frequencies = convert_frequency_units(frequencies, 'thz', args.Units)
+    initial_phonon_frequency_unit = "thz"  # default value
+
+    try:
+        if args.InitialPhononFrequencyUnits is not None:
+            initial_phonon_frequency_unit = args.InitialPhononFrequencyUnits
+    except AttributeError:
+        pass
+
+    frequencies = convert_frequency_units(frequencies, initial_phonon_frequency_unit, args.Units)
 
     if linewidths is not None:
         linewidths = convert_frequency_units(linewidths, 'thz', args.Units)
