@@ -409,7 +409,7 @@ def read_phono3py_hdf5(file_path, linewidth_temperature):
 # Misc Files
 # ----------
 
-def read_born(structure, file_path="BORN"):
+def read_born(structure, file_path="BORN", is_symmetry=True):
     """ Read a Phonopy BORN file, expand the charges for the
     supplied structure, and return a list of Born effective-charge
     tensors for each atom in the structure.
@@ -442,7 +442,7 @@ def read_born(structure, file_path="BORN"):
 
     # Read the BORN file.
 
-    born_data = parse_BORN(cell, filename=file_path)
+    born_data = parse_BORN(cell, filename=file_path, is_symmetry=is_symmetry)
 
     # Return the Born effective-charge tensors from the dictionary
     # returned by parse_BORN.
